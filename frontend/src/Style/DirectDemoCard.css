@@ -1,0 +1,321 @@
+/* ============================================================
+   DIRECT DEMO HIGHLIGHT CARD (Portfolio / Resume Showcase)
+   ============================================================ */
+
+.direct-demo-card {
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 32px 28px;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+/* Glowing Highlight Border Effect */
+.direct-demo-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 50%, #3b82f6 100%);
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Badge Row */
+.demo-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.demo-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #1d4ed8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.demo-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  animation: demoPulse 1.8s infinite;
+}
+
+@keyframes demoPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.demo-free-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 3px 9px;
+  border-radius: 12px;
+}
+
+/* Header Section */
+.demo-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo-main-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-title-accent {
+  display: inline-block;
+  animation: tiltZap 2s ease infinite;
+}
+
+@keyframes tiltZap {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  75% { transform: rotate(10deg) scale(1.1); }
+}
+
+.demo-subtitle {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Launch Action Buttons */
+.demo-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-launch-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+}
+
+/* Fleet Owner Button Styling */
+.demo-owner-btn {
+  border-color: #bfdbfe;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.06);
+}
+
+.demo-owner-btn:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+}
+
+.owner-icon-box {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Driver Button Styling */
+.demo-driver-btn {
+  border-color: #a7f3d0;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.06);
+}
+
+.demo-driver-btn:hover {
+  border-color: #059669;
+  background: #ecfdf5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.15);
+}
+
+.driver-icon-box {
+  background: #059669;
+  color: #ffffff;
+}
+
+.demo-btn-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.demo-launch-btn:hover .demo-btn-icon-box {
+  transform: scale(1.08);
+}
+
+.demo-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.demo-btn-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.demo-btn-arrow {
+  color: #94a3b8;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.demo-launch-btn:hover .demo-btn-arrow {
+  transform: translateX(4px);
+  color: #0f172a;
+}
+
+.demo-btn-caption {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+/* Auto-fill Box */
+.demo-autofill-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fffbeb;
+  border: 1px dashed #fcd34d;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.demo-autofill-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.demo-autofill-btn {
+  padding: 5px 11px;
+  background: #f59e0b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.demo-autofill-btn:hover {
+  background: #d97706;
+}
+
+/* Features Checklist */
+.demo-features-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.demo-features-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.demo-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.demo-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.demo-check-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.demo-features-list strong {
+  color: #0f172a;
+}
+
+/* Footer Note */
+.demo-footer-note {
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  line-height: 1.4;
+}

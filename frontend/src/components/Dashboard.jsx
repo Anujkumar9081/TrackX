@@ -30,6 +30,7 @@ import {
   ChevronsLeft
 } from 'lucide-react';
 import '../Style/Dashboard.css';
+import { API_URL } from '../config';
 
 // Fix Leaflet marker icons default path in Vite/Webpack
 delete L.Icon.Default.prototype._getIconUrl;
@@ -436,7 +437,7 @@ const Dashboard = () => {
 
     // Fetch live registered fleet from backend
     if (token) {
-      fetch('http://localhost:3000/dashboard', {
+      fetch(`${API_URL}/dashboard`, {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then((res) => res.json())
@@ -486,7 +487,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        await fetch(`http://localhost:3000/trucks/${truckNumber}`, {
+        await fetch(`${API_URL}/trucks/${truckNumber}`, {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${token}`
@@ -794,7 +795,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        await fetch('http://localhost:3000/trips/start', {
+        await fetch(`${API_URL}/trips/start`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -872,7 +873,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const res = await fetch('http://localhost:3000/trips/end', {
+        const res = await fetch(`${API_URL}/trips/end`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -908,7 +909,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token');
     if (token && activeTruck.Truck_num) {
       try {
-        await fetch(`http://localhost:3000/trucks/${activeTruck.Truck_num}/reset-service`, {
+        await fetch(`${API_URL}/trucks/${activeTruck.Truck_num}/reset-service`, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${token}`

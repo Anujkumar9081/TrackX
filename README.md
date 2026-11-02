@@ -131,7 +131,8 @@ TrackX/
 │   ├── models/
 │   │   ├── Document.js           # Schema for compliance documents
 │   │   ├── Trip.js               # Schema for journey routes, mileage & fuel audits
-│   │   └── Truck.js              # Schema for truck specs & maintenance logs
+│   │   ├── Truck.js              # Schema for truck specs & maintenance logs
+│   │   └── User.js               # Schema for users
 │   ├── routes/
 │   │   ├── amenityRoutes.js      # Highway amenities API (Petrol pumps & Dhabas)
 │   │   ├── documentRoutes.js     # Document vault upload & filter API
@@ -258,5 +259,9 @@ cd TrackX
 - [ ] **Automated FASTag & Toll Deduction**: Link real-time FASTag API for automated toll reconciliation.
 - [ ] **WhatsApp & SMS Alerts**: Send automated maintenance and fuel theft alerts directly to truck owners.
 
+---
 
+## 📄 License
+
+This project is licensed under the [ISC License](LICENSE).
 

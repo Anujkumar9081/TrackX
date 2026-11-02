@@ -129,11 +129,15 @@ app.post("/registrations", auth, async (req, res) => {
 
 ////////////////////////////////////////////
 
+app.get("/", (req, res) => {
+  res.json({ status: "TrackX API is running" });
+});
+
 app.post("/dashboard", auth, async (req, res) => {
 
 })
 
-app.listen(3000, () => {
-  console.log("server is running");
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 })

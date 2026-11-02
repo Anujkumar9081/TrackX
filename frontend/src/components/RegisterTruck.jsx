@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Truck, User, ArrowLeft, Bell, ChevronDown, Plus } from 'lucide-react';
+import { API_URL } from '../config';
 import '../Style/RegisterTruck.css';
 
 const RegisterTruck = () => {
@@ -119,7 +120,7 @@ const RegisterTruck = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3000/registrations', {
+      const response = await fetch(`${API_URL}/registrations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,7 +173,7 @@ const RegisterTruck = () => {
       console.error('Registration submit error:', err);
       setStatusMessage({
         type: 'error',
-        text: 'Unable to connect to server. Ensure backend is running on http://localhost:3000.'
+        text: `Unable to connect to server. Ensure backend is running on ${API_URL}.`
       });
     } finally {
       setLoading(false);

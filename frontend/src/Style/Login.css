@@ -4,7 +4,26 @@
   align-items: center;
   justify-content: center;
   background-color: #f8fafc;
-  padding: 20px;
+  padding: 30px 20px;
+}
+
+/* Two-column layout: Form on Left, Direct Demo on Right */
+.auth-content-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 980px;
+}
+
+@media (max-width: 900px) {
+  .auth-content-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 480px;
+  }
 }
 
 .login-container, .signup-container {
@@ -15,6 +34,7 @@
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
+  box-sizing: border-box;
 }
 
 .auth-header {
