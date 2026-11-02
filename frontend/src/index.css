@@ -1,0 +1,91 @@
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-secondary: #334155;
+  --border-color: #e2e8f0;
+  
+  /* Truck Card (Blue Accent) */
+  --blue-card-bg: #f4f8ff;
+  --blue-border: #dbeafe;
+  --blue-primary: #2563eb;
+  --blue-icon-bg: #eff6ff;
+
+  /* Driver Card (Green Accent) */
+  --green-card-bg: #f4faf6;
+  --green-border: #dcfce7;
+  --green-primary: #059669;
+  --green-btn: #009951;
+  --green-btn-hover: #008043;
+  --green-icon-bg: #eaf8f0;
+
+  /* Red Alert */
+  --red-alert: #ef4444;
+  --red-bg: #fef2f2;
+  --red-border: #fecaca;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input, select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Toast Message */
+.toast-banner {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideDown 0.3s ease;
+}
+
+.toast-success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.toast-error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
